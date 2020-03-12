@@ -185,8 +185,12 @@ public:
     TCanvas* CheckDp(void);
     TCanvas* CheckDp_test(void);
     TCanvas* CheckDp_test2(void);
+
     TCanvas* CheckDpGlobal(void);
     Double_t SumSquareDp(Bool_t IncludeExtraData = kFALSE);
+
+    Double_t SumSquareDp_test(Bool_t IncludeExtraData = kFALSE);
+
 
     TRotation fTCSInHCS; // transformations vector from TCS to HCS
     TVector3 fPointingOffset; // Optical point in lab coordinate system
@@ -299,7 +303,7 @@ public:
 		for (auto item : poly){
 			std::cout<<"	"<<(counter++)<<"/"<<poly.size()<<" :: "<<item<<std::endl;
 		}
-		std::cout<<"OptOrders : "<<OptOrder<<std::endl;
+		std::cout<<"OptOrders : "<<(UInt_t)OptOrder<<std::endl;
 		std::cout<<std::endl;
 	}
 };
